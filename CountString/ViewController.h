@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
+@property (strong, nonatomic) IBOutlet UITextField *stringTextView;
+- (IBAction)countStringChar:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIButton *btncountStringChar;
 @end
 
